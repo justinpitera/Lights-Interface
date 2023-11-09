@@ -23,7 +23,7 @@
             <th>Power</th>
             <th>Brightness</th>
             <th>RGB Value</th>
-            <th>Set Brightness</th> <!-- Added header for brightness control -->
+            <th>Set Brightness</th> 
         </tr>
         {% for bulb in bulbs %}
             <tr>
@@ -33,7 +33,6 @@
                 <td>{{ bulb.rgb }}</td>
                 <td>{{ bulb.temp }}</td>
                 <td>
-                    <!-- Brightness slider form -->
                     <input type="range" id="brightnessSlider_{{ bulb.ip }}" min="0" max="100" value="{{ bulb.bright }}" oninput="changeBrightness('{{ bulb.ip }}')">
                     <span id="brightnessValue_{{ bulb.ip }}">{{ bulb.bright }}%</span>
                 </td>
